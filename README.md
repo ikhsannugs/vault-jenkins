@@ -11,4 +11,7 @@ path "kv/data/secret/jenkins/*" {
 6. Buat auth method menggunakan username&password
 7. masukkan auth method tadi ke dalam policy
 8. Generate token auth method yang dibuat di command line
-9. Test 
+9. Test tokennnya menggunakan command line
+10. Buat credential berdasarkan token tadi di jenkins
+11. Buat jenkins filenya 
+
