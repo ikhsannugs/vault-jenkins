@@ -50,7 +50,7 @@ LimitNOFILE=65536
 WantedBy=multi-user.target
 EOF
 
-tee -a /etc/environtment << EOF
+tee -a /etc/environment << EOF
 export VAULT_ADDR='http://127.0.0.1:8200'
 EOF
 
