@@ -51,7 +51,7 @@ WantedBy=multi-user.target
 EOF
 
 tee -a /etc/environtment << EOF
-export VAULT_ADDR='http://172.31.42.60:8200'
+export VAULT_ADDR='http://127.0.0.1:8200'
 EOF
 
 systemctl daemon-reload
