@@ -20,9 +20,8 @@ tee /etc/vault/config.hcl << EOF
 ui = true
 disable_mlock = true
 
-storage "raft" {
-  path    = "/etc/vault/data"
-  node_id = "node1"
+storage "file" {
+  path = "/etc/vault/data"
 }
 
 listener "tcp" {
@@ -54,6 +53,7 @@ tee -a /etc/environment << EOF
 export VAULT_ADDR='http://127.0.0.1:8200'
 EOF
 
+source /etc/environment
 systemctl daemon-reload
 systemctl enable vault
 systemctl start vault
